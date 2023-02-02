@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts.css" media="screen">
     <link rel="stylesheet" href="styles.css" media="screen">
     <title>Components</title>
   </head>
@@ -18,34 +19,104 @@
     <section>
         <div class="title-components">Bouton</div>
         <div class="p-15">
-            <ul class="flex justify-between w-50">
+            <ul class="flex justify-between">
                 <li><button class="btn">Bouton exemple</button></li>
             </ul>
         </div>
     </section>
     <section>
+      <div class="title-components">Tabs</div>
+      <div class="p-15">
+          <ul class="flex gap-15 ">
+              <li>
+                <button class="tabs">
+                  <span>Bouton exemple</span> | 
+                  <span>000</span>
+                </button>
+              </li>
+              <li>
+                <button class="tabs active">
+                  <span>Bouton exemple</span> | 
+                  <span>000</span>
+                </button>
+              </li>
+          </ul>
+      </div>
+    </section>
+    <section>
+      <div class="title-components">Filtre</div>
+      <div class="p-15">
+          <ul class="flex gap-15 ">
+              <li>
+
+                <span class="filter">Filtre
+                  <button class="close"></button>
+                </span>
+              </li>
+          </ul>
+      </div>
+    </section>
+    <section>
+      <div class="title-components">Menu</div>
+          <div class="p-15">
+            <nav>
+              <ul class="flex justify-between">
+                  <li class="nav-item p-15">
+                    <a class="nav-link" href="#">
+                      <span class="icon-material-symbols_home-rounded"></span>
+                      <span class="text-menu">Tableau de bord</span>
+                    </a>
+                  </li>
+              </ul>
+            </nav>
+          </div>
+    </section>
+    <section>
+      <div class="title-components">Push</div>
+          <div class=" p-15">
+              <ul class="flex blue gap-15 p-15">
+                  <li>
+                    <a class="push notification" href="#">
+                      <span class="icon-mdi_bell"></span>
+                      <span class="number">1</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="push" href="#">
+                      <span class="icon-ant-design_setting-filled"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="push" href="#">
+                      <span class="icon-mdi_user"></span>
+                    </a>
+                  </li>
+              </ul>
+          </div>
+    </section>
+    <section>
       <div class="title-components">Input</div>
       <div class="p-15">
-          <ul class="flex">
-              <li class="p-15">
+          <ul class="flex gap-15">
+              <li>
                 <div class="input-group">
                   <label for="">Input text</label>
                   <input type="text" class="input"placeholder="Placeholder">
                </div>
               </li>
-              <li class="p-15">
+              <li>
                 <div class="input-group">
                   <label for="">Date</label>
                   <input type="date" class="input"placeholder="Placeholder">
                </div>
               </li>
-              <li class="p-15">
+              <li>
                 <div class="input-group">
                   <label for="">Time</label>
                   <input type="time" class="input"placeholder="Placeholder">
                </div>
               </li>
-              <li class="p-15">
+              <li>
                 <div class="input-group">
                   <label for="">Select</label>
                   <div class="select">
@@ -60,6 +131,6 @@
           </ul>
       </div>
   </section>
-    <script src="style.js"></script>
+  <script src="style.js"></script>
   </body>
 </html>

@@ -12,8 +12,11 @@ body{
     --black50:#CCCCCC;
     --red:#E62E2E;
     --bg:#F2F4F9;
+    --bg-menu-:#F7F8FA;
     --grey:#E5E7EB;
     --grey-blue:#6B7A99;
+    --blue:#291F64;
+    --blue-foncé:#26334D;
   }
 
 *{
@@ -38,6 +41,10 @@ ul li{
 
 .w-50{
     width: 50%;
+}
+
+.gap-15{
+    gap:15px;
 }
 /* -----------------------------------------------------------*/
 
@@ -199,7 +206,6 @@ select::-ms-expand {
     position: relative;
  }
 
- /* Remove IE arrow */
 select::-ms-expand {
     display: none;
   }
@@ -223,3 +229,181 @@ select::-ms-expand {
 
 
 
+/* Menu */
+nav{
+background: var(--bg-menu-);
+}
+
+.nav-link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 25px 10px 25px;
+    gap: 15px;
+    color: var(--grey-blue);
+    border-radius: 5px;
+}
+
+.nav-link:hover{
+    background: var(--red);
+    color: var(--white);
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+
+.text-menu{
+    font-size: 12px;
+}
+
+/* -----------------------------------------------------------*/
+
+
+/* Push */
+
+.blue{
+    background: var(--blue);
+}
+
+.push{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    background: var(--bg);
+    color: var(--blue);
+    border-radius: 50px;
+}
+
+.push:hover{
+    animation: push 0.5s;
+    box-shadow: 0 0 0 5px transparent;
+}
+
+.push.notification{
+    position: relative;
+}
+
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 8px;
+    background: var(--red);
+    position: absolute;
+    top: -2px;
+    right: -10px;
+    font-size: 12px;
+    color:var(--white);
+    border-radius: 10px;
+}
+    
+@keyframes push {
+    0% { box-shadow: 0 0 0 0 var(--bg); }
+  }
+/* -----------------------------------------------------------*/
+
+
+/* Tabs */
+
+.tabs{
+    padding: 10px 15px;
+    border: 1px solid rgba(173, 184, 204, 0.5);
+    border-radius: 5px;
+    color: var(--grey-blue);
+    background: var(--white);
+    position: relative;
+    font-size: 12px;
+}
+
+.tabs span{
+    color: var(--blue);
+    font-weight: 500;
+}
+
+.tabs:hover{
+    animation:tabs 0.5s;
+    background: var(--red);
+    border: none;
+    color: var(--white);
+    box-shadow: 0 0 0 3px transparent;
+}
+
+.tabs:hover span{
+    color: var(--white);
+}
+
+
+.tabs.active::after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--red);
+    border-radius: 10px;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+}
+
+@keyframes tabs {
+    0% { box-shadow: 0 0 0 0 var(--red); }
+  }
+
+
+/* -----------------------------------------------------------*/
+
+/* Filtre */
+
+.filter{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 7px 5px 7px 15px;
+    border: 1px solid rgba(173, 184, 204, 0.5);
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--blue-foncé);
+    position: relative;
+}
+
+.close{
+    background: none;
+    border: none;
+}
+
+.close::after{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    content: "\00d7";
+    color: var(--white);
+    background: var(--blue);
+    padding: 11px 8px 11px 7px;
+    font-size: 12px;
+    line-height: 0;
+}
+
+.close:hover::after{
+    background: var(--red);
+}
+
+.filter::before{
+    content: "";
+    display: flex;
+    width: 1px;
+    height: 18px;
+    background: var(--blue);
+    position: absolute;
+    left: 0;
+}
+
+.filter:hover{
+    background: var(--bg);
+    border-color: var(--black20)
+}
+
+
+
+/* -----------------------------------------------------------*/
